@@ -7,7 +7,7 @@ const pageData = {
   }
 };
 
-export default function Work() {
+export default function Project() {
   return <>
     <Hero {...pageData.Hero} />
   </>;

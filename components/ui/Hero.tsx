@@ -1,5 +1,6 @@
 import { Container } from "@/components/base/Container";
 import { Section } from "@/components/base/Section";
+import Image from "next/image";
 
 type Props = {
   title: string;
@@ -15,7 +16,14 @@ export const Hero = ({ title, description }: Props) => {
           <p className="text-xl">{description}</p>
         </div>
 
-        <div></div>
+        <div className="flex justify-center">
+          <Image
+            src="/project.png"
+            alt="Hero image"
+            width={400}
+            height={400}
+          />
+        </div>
       </div>
     </Container>
   </Section>;
