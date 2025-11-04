@@ -34,16 +34,16 @@ export const Navbar = () => {
         </nav>
 
         {/* Mobile toggle */}
-        <button
+        {/* <button
           onClick={() => setOpen(!open)}
           className="md:hidden p-2 text-gray-700 dark:text-gray-200"
         >
           {open ? "X" : "O"}
-        </button>
+        </button> */}
       </Container>
 
       {/* Mobile menu */}
-      <div
+      {/* <div
         className={cn(
           "md:hidden border-t border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900 transition-all duration-300 overflow-hidden",
           open ? "max-h-64" : "max-h-0"
@@ -61,7 +61,7 @@ export const Navbar = () => {
             </a>
           ))}
         </Container>
-      </div>
+      </div> */}
     </header>
   );
 };

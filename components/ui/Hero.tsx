@@ -10,7 +10,7 @@ type Props = {
 export const Hero = ({ title, description }: Props) => {
   return <Section>
     <Container>
-      <div className="grid grid-cols-2 gap-7">
+      <div className="grid grid-cols-2 gap-7 items-center">
         <div className="flex flex-col gap-6">
           <h1 className="text-[80px] uppercase">{title}</h1>
           <p className="text-xl">{description}</p>
