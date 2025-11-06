@@ -2,6 +2,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import type { Metadata } from "next";
 import { Paytone_One, Geologica } from "next/font/google";
 import "./globals.css";
+import LayoutClient from "./layoutClient";
 
 const contentFont = Geologica({
   weight: ["300", "400", "600"],
@@ -29,7 +30,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={`pt-24 ${titleFont.variable} ${contentFont.variable}`}>
         <Navbar />
-        {children}
+        {/* {children} */}
+        <LayoutClient>
+          {children}
+        </LayoutClient>
       </body>
     </html>
   );
