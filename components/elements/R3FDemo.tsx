@@ -9,13 +9,13 @@ import { damp, easeInOutCubic, lerp } from '../utils/lerp';
 
 const data = {
   start: {
-    position: [0.25, -1.75, 0] as [number, number, number],
+    position: [0.5, -1, 0] as [number, number, number],
     scale: 2.3,
     rotation: [-0.5, 0.65, 0.45] as [number, number, number],
   },
   end: {
-    position: [0, -1, 0] as [number, number, number],
-    scale: 0.75,
+    position: [0, 0, 0] as [number, number, number],
+    scale: 1,
     rotation: [0, 0, 0] as [number, number, number],
     // position: [0, -1.75, 0] as [number, number, number],
     // scale: 2.5,
@@ -97,7 +97,7 @@ const Box = ((props: ThreeElements["mesh"]) => {
 
 export const R3FDemo = () => {
 
-  return <div className="w-dvw h-[130vh]">
+  return <div className="w-dvw h-dvh">
     <Canvas>
       <ambientLight intensity={Math.PI / 2} />
       <spotLight position={[10, 15, 15]} angle={0.15} penumbra={1} decay={0} intensity={Math.PI} />

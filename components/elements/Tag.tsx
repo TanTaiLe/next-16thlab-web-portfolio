@@ -13,5 +13,5 @@ export const Tag = ({ data }: Props) => {
 };
 
 const TagItem = ({ label }: { label: string }) => {
-  return <div className="rounded-full py-2 px-4 border border-gray-300 text-xl font-light">{label}</div>;
+  return <div className="rounded-full py-2 px-4 border border-[#1F252C] text-xl font-light">{label}</div>;
 };

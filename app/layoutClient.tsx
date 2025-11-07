@@ -14,7 +14,9 @@ export default function LayoutClient({
   return (
     <ScrollProvider viewportHeight={height} sectionCount={2}>
       <Navbar />
-      {children}
+      <div className="grid pt-20">
+        {children}
+      </div>
     </ScrollProvider>
   );
 }

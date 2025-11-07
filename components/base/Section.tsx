@@ -7,7 +7,7 @@ type Props = {
 };
 
 export const Section = ({ children, className = "" }: Props) => {
-  return <div className={cn("py-4 sm:py-6 lg:py-24", className)}>
+  return <div className={cn(className, "py-4 sm:py-6 lg:py-20")}>
     {children}
   </div>;
 };

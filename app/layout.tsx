@@ -28,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`pt-24 ${titleFont.variable} ${contentFont.variable}`}>
+      <body className={`${titleFont.variable} ${contentFont.variable}`}>
         <Navbar />
         {/* {children} */}
         <LayoutClient>
