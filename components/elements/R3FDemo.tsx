@@ -1,8 +1,7 @@
 "use client";
 
 import * as THREE from 'three'
-// import { createRoot } from 'react-dom/client'
-import { forwardRef, memo, useEffect, useMemo, useRef, useState } from 'react'
+import { useMemo, useRef } from 'react'
 import { Canvas, useFrame, ThreeElements } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei';
 import { useScrollState } from "@/contexts/ScrollContext";
@@ -10,14 +9,17 @@ import { damp, easeInOutCubic, lerp } from '../utils/lerp';
 
 const data = {
   start: {
-    position: [0, -1, 0] as [number, number, number],
-    scale: 2,
-    rotation: [-0.5, 0.5, 0.5] as [number, number, number],
+    position: [0.25, -1.75, 0] as [number, number, number],
+    scale: 2.3,
+    rotation: [-0.5, 0.65, 0.45] as [number, number, number],
   },
   end: {
-    position: [0, 0, 0] as [number, number, number],
-    scale: 1,
+    position: [0, -1, 0] as [number, number, number],
+    scale: 0.75,
     rotation: [0, 0, 0] as [number, number, number],
+    // position: [0, -1.75, 0] as [number, number, number],
+    // scale: 2.5,
+    // rotation: [-0.5, 0.75, 0.5] as [number, number, number],
   }
 };
 
@@ -68,21 +70,21 @@ const Box = ((props: ThreeElements["mesh"]) => {
     // position
     tmpCurrentPos.copy(mesh.position);
     mesh.position.set(
-      damp(tmpCurrentPos.x, tmpTargetPos.x, 8, delta), // 8 = hệ số "tốc độ" mượt
-      damp(tmpCurrentPos.y, tmpTargetPos.y, 8, delta),
-      damp(tmpCurrentPos.z, tmpTargetPos.z, 8, delta)
+      damp(tmpCurrentPos.x, tmpTargetPos.x, 4, delta), // 8 = hệ số "tốc độ" mượt
+      damp(tmpCurrentPos.y, tmpTargetPos.y, 4, delta),
+      damp(tmpCurrentPos.z, tmpTargetPos.z, 4, delta)
     );
 
     // scale
     const cS = mesh.scale.x; // uniform nên lấy x
-    const s = damp(cS, targetScale, 8, delta);
+    const s = damp(cS, targetScale, 4, delta);
     mesh.scale.set(s, s, s);
 
     // rotation
     mesh.rotation.set(
-      damp(mesh.rotation.x, targetRotX, 8, delta),
-      damp(mesh.rotation.y, targetRotY, 8, delta),
-      damp(mesh.rotation.z, targetRotZ, 8, delta)
+      damp(mesh.rotation.x, targetRotX, 4, delta),
+      damp(mesh.rotation.y, targetRotY, 4, delta),
+      damp(mesh.rotation.z, targetRotZ, 4, delta)
     );
   });
 
@@ -95,13 +97,12 @@ const Box = ((props: ThreeElements["mesh"]) => {
 
 export const R3FDemo = () => {
 
-  return <div className="w-dvw h-dvh border border-neutral-900">
+  return <div className="w-dvw h-[130vh]">
     <Canvas>
       <ambientLight intensity={Math.PI / 2} />
-      <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} decay={0} intensity={Math.PI} />
-      <pointLight position={[-10, -10, -10]} decay={0} intensity={Math.PI} />
+      <spotLight position={[10, 15, 15]} angle={0.15} penumbra={1} decay={0} intensity={Math.PI} />
+      <pointLight position={[-20, 5, 10]} decay={0} intensity={Math.PI} />
       <Box />
-
     </Canvas>
   </div >
 }
