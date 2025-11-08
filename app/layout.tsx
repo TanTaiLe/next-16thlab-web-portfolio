@@ -5,7 +5,7 @@ import "./globals.css";
 import LayoutClient from "./layoutClient";
 
 const contentFont = Geologica({
-  weight: ["300", "400", "600"],
+  weight: ["300", "400", "500", "600"],
   variable: "--font-content",
   subsets: ["latin", "vietnamese"],
 });

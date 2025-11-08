@@ -22,12 +22,12 @@ export const Navbar = () => {
   ];
   return (
     <header className="fixed top-8 left-0 right-0 z-50">
-      <Container className="flex h-16 items-center justify-between">
+      <Container className="flex items-center justify-between">
         {/* Logo */}
         <Logo />
 
         {/* Desktop menu */}
-        <nav className="hidden md:flex items-center">
+        <nav className="hidden md:flex items-center gap-4">
           {navItems.map((item) => (
             <NavbarItem key={item.label} {...item} />
           ))}
@@ -90,21 +90,18 @@ const NavbarItem = ({ label, href = "#" }: NavbarItemProps) => {
   return (
     <Link
       href={href}
-      className="group text-xl font-semibold transition-colors px-8 py-4"
+      className="relative text-xl flex group overflow-hidden p-[1px]"
     >
-      <span className="relative z-10
-                after:content-['']
-                after:absolute
-                after:top-[-8px]
-                after:left-0
-                after:right-0
-                after:h-1
-                after:rounded
-                after:bg-[#1F252C]
-                after:scale-x-0
-                after:origin-center
-                after:transition-transform
-                after:duration-300
-                group-hover:after:scale-x-100">{label}</span>
+      <span className="px-6 py-3 rounded-lg border border-[#171A1F]
+                      transition-transform duration-300
+                      origin-bottom
+                      group-hover:scale-0
+                      ">{label}</span>
+      <span className="absolute top-0 left-0 z-20 
+                      px-6 py-3 rounded-lg border border-[#171A1F] bg-[#171A1F] text-white
+                      transition-transform duration-300
+                      origin-bottom-left rotate-12 translate-y-14
+                      group-hover:rotate-0 group-hover:translate-y-0
+                      ">{label}</span>
     </Link>)
 }

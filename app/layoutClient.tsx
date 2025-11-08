@@ -1,6 +1,5 @@
 "use client";
 
-import { Navbar } from "@/components/layout/Navbar";
 import { ScrollProvider } from "@/contexts/ScrollContext";
 import { useVisibleViewport } from "@/hooks/useVisibleViewport";
 
@@ -13,8 +12,7 @@ export default function LayoutClient({
 
   return (
     <ScrollProvider viewportHeight={height} sectionCount={2}>
-      <Navbar />
-      <div className="grid pt-20">
+      <div className="grid pt-52 gap-40">
         {children}
       </div>
     </ScrollProvider>
