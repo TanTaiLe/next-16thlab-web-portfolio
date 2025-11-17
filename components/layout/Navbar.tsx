@@ -40,6 +40,7 @@ export const Navbar = () => {
         >
           {open ? "X" : "O"}
         </button> */}
+        <button>CTA</button>
       </Container>
 
       {/* Mobile menu */}

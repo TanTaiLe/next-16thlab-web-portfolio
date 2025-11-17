@@ -11,7 +11,7 @@ export default function LayoutClient({
   const { width, height } = useVisibleViewport();
 
   return (
-    <ScrollProvider viewportHeight={height} sectionCount={2}>
+    <ScrollProvider viewportHeight={height} sectionCount={3}>
       <div className="grid pt-52 gap-40">
         {children}
       </div>
