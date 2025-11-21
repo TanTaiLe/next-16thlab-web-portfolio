@@ -57,11 +57,12 @@ export default function Project() {
     </Section>
     <Section>
       <R3FDemo />
-      <Container className="grid grid-cols-6 gap-8">
-        <div className="flex flex-col gap-6 col-start-2 col-span-4">
+      <Container className="grid grid-cols-6">
+        <div className="flex flex-col gap-20 col-start-2 col-span-4">
           <h1 className="text-[80px] font-normal leading-[96px]">
             Diện mạo mới, trải nghiệm rạp phim trọn vẹn cùng Cinestar
           </h1>
+          <p className="text-[50px] font-light leading-[75px]">Chúng tôi làm mới trải nghiệm người dùng, tạo hành trình tương tác tự nhiên và liền mạch hơn.</p>
         </div>
       </Container>
     </Section>
