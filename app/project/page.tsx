@@ -17,7 +17,7 @@ const pageData = {
       clientName: "Cinestar",
       sector: "Giải trí",
       year: "2025",
-      services: ["UX UI Design", "UX UI Design"]
+      services: ["UX UI Design"]
     }
   }
 };
@@ -30,7 +30,7 @@ export default function Project() {
         <div className="grid gap-6 col-start-2 col-span-4">
           <h1 className="display text-[88px] uppercase">{pageData.ProjectDetail.title}</h1>
           <p className="text-xl leading-8 font-light">{pageData.ProjectDetail.description}</p>
-          <div className="grid w-6/12 grid-cols-2 gap-9">
+          <div className="grid w-6/12 grid-cols-2 gap-9 items-start">
             <div className="grid gap-[2px]">
               <span className="text-lg font-light">Khách hàng</span>
               <span className="text-xl font-semibold">{pageData.ProjectDetail.summary.clientName}</span>
@@ -55,34 +55,8 @@ export default function Project() {
         </div>
       </Container>
     </Section>
-    <Section className="lg:pt-10">
-      <Container className="grid grid-cols-6 gap-8">
-        <div className="grid grid-cols-4 gap-8 col-start-2 col-span-4">
-          <h3 className="text-[20px]">Tổng quan</h3>
-          <div className="flex flex-col gap-4 col-span-3">
-            <div className="grid gap-4"> <p>Cinestar là hệ thống rạp chiếu phim Việt Nam mang tinh thần trẻ trung và hiện đại, nơi khán giả tận hưởng điện ảnh trong không gian thân thiện và tràn đầy năng lượng. </p>
-              <p>Trong dự án này, chúng tôi định hình lại trải nghiệm kỹ thuật số của ứng dụng Cinestar, hướng đến một diện mạo sống động hơn, phản ánh đúng cá tính trẻ trung của thương hiệu, đồng thời mang đến hành trình xem phim mượt mà, dễ tiếp cận và truyền cảm hứng cho mọi khán giả.</p>
-            </div>
-            <Divider />
-            <div className="flex justify-between items-center">
-              <span>Khách hàng</span>
-              <span>CINESTAR</span>
-            </div>
-            <Divider />
-            <div className="flex justify-between items-center">
-              <span>Năm thực hiện</span>
-              <span>2025</span>
-            </div>
-            <Divider />
-            <div className="flex justify-between items-center">
-              <span>Lĩnh vực</span>
-              <span>Giải trí</span>
-            </div>
-          </div>
-        </div>
-      </Container>
-    </Section>
     <Section>
+      <R3FDemo />
       <Container className="grid grid-cols-6 gap-8">
         <div className="flex flex-col gap-6 col-start-2 col-span-4">
           <h1 className="text-[80px] font-normal leading-[96px]">
@@ -90,7 +64,6 @@ export default function Project() {
           </h1>
         </div>
       </Container>
-      <R3FDemo />
     </Section>
   </>;
 }
